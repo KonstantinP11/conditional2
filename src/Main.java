@@ -40,6 +40,12 @@ public class Main {
             }
         }
 //Задача 4
+        int deliveryDistance = 95;
+
+        if (deliveryDistance < 20) {
+            System.out.println("Потребуется дней: 1")
+        } else if (year % 4 == 0) {
+            System.out.println(year + " год является високосным");
 
 
     }
