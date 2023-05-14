@@ -27,25 +27,38 @@ public class Main {
         }
 //Задача 3
         System.out.println("Задача 3");
-        int year = 2023;
+        int year = 2000;
         if (year % 400 == 0) {
             System.out.println(year + " год является високосным");
-        } else {
-            if (year % 100 == 0) {
-                System.out.println(year + " год не является високосным");
-            } else if (year % 4 == 0) {
-                System.out.println(year + " год является високосным");
-            } else {
-                System.out.println(year + " год не является високосным");
-            }
-        }
-//Задача 4
-        int deliveryDistance = 95;
-
-        if (deliveryDistance < 20) {
-            System.out.println("Потребуется дней: 1")
+        } else if (year % 100 == 0) {
+            System.out.println(year + " год не является високосным");
         } else if (year % 4 == 0) {
             System.out.println(year + " год является високосным");
+        } else {
+            System.out.println(year + " год не является високосным");
+        }
+
+
+//Задача 4
+        System.out.println("Задача 4");
+        int deliveryDistance = 90;
+        int deliveryDays = 1;
+        var answer = "Потребуется дней: ";
+        if (deliveryDistance > 0 && deliveryDistance <= 20) {
+            deliveryDays = 1;
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            deliveryDays += 1;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            deliveryDays += 2;
+        }
+        answer = answer + deliveryDays;
+        if (deliveryDistance > 100) {
+            answer = "доставки нет";
+        }
+        System.out.println(answer);
+
+//Задача 5
+        System.out.println("Задача 5");
 
 
     }
